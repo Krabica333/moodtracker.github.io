@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    text-align: center;
+}
+
+.mood-display {
+    cursor: default;
+}
+
+.emoji {
+    font-size: 100px;
+    text-shadow: 0 0 20px yellow; /* Yellow glow for all emojis except angry */
+}
+
+h1 {
+    font-size: 40px;
+    text-shadow: 0 0 20px white; /* White glow for text */
+}
+
+.unicorn-button {
+    position: fixed; /* Positioning it in the top right corner */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    font-size: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0 0 20px purple; /* Purple glow for unicorn */
+}
+
+.sidebar {
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: -250px; /* Initially hidden off-screen */
+    width: 250px; /* Adjusted width */
+    height: 100%;
+    background-color: #444; 
+    padding: 20px; 
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.5);
+    transition: left 0.5s ease; /* Slide-in effect */
+}
+
+.sidebar.visible {
+    left: 0; /* Slide in */
+}
+
+.hidden {
+    display: none; /* Hides the element */
+}
+
+.close-button {
+   font-size: 30px; 
+   color: white; 
+   background-color: transparent; 
+   border: none; 
+   cursor: pointer; 
+   position: absolute; 
+   top: 10px; 
+   right: 10px; 
+}
+
+.password-input {
+   width: calc(100% - 20px);
+   padding: 10px;
+   margin-top: 10px;
+   border-radius: 5px;
+   border: none;
+   background-color: #666; 
+   color: white; 
+   font-size: 16px; 
+   transition: background-color 0.3s ease; 
+}
+
+.password-input::placeholder {
+   color: #bbb; /* Placeholder color */
+}
+
+.password-input:hover,
+.password-input:focus {
+   background-color: #777; /* Darker on hover/focus */
+}
+
+.submit-button {
+   width: calc(100% - 20px);
+   padding: 10px;
+   margin-top: 10px;
+   border-radius: 5px;
+   border:none; 
+  background-color:#666 ; 
+  color:white ; 
+  cursor:pointer ; 
+  transition :background-color .3 s ease ; 
+}
+
+.submit-button:hover {
+  background-color :#777 ; 
+}
+
+.mood-panel {
+   margin-top: 20px; 
+}
+
+.mood-panel button {
+   background-color:#666 ; 
+   color:white ; 
+   border-radius :10px ; /* Rounded corners */
+   border :none ; 
+   padding :15px 20px ; /* Increased padding for better look */
+   margin-top :10px ; 
+   cursor :pointer ; 
+   font-size :18px ; /* Slightly larger text */
+   display :flex ; /* Flexbox for centering content */
+   align-items :center ; /* Center items vertically */
+   justify-content :center ; /* Center items horizontally */
+   transition :background-color .3 s ease , transform .2 s ease ; /* Transition effects */
+}
+
+.mood-panel button:hover {
+    background-color :#777 ; /* Darker background on hover */
+    transform :scale(1.05) ; /* Slightly enlarge button on hover */
+}
+
+/* Specific styles for mood buttons with emojis */
+.mood-panel button:nth-child(1) { /* Happy emoji */
+   text-shadow :0 0 20px yellow ; /* Yellow glow for happy emoji */
+}
+.mood-panel button:nth-child(2) { /* Sad emoji */
+   text-shadow :0 0 20px yellow ; /* Yellow glow for sad emoji */
+}
+.mood-panel button:nth-child(3) { /* Anxious emoji */
+   text-shadow :0 0 20px yellow ; /* Yellow glow for anxious emoji */
+}
+.mood-panel button:nth-child(4) { /* Excited emoji */
+   text-shadow :0 0 20px yellow ; /* Yellow glow for excited emoji */
+}
+.mood-panel button:nth-child(5) { /* Angry emoji */
+   text-shadow :0 0 20px red ; /* Red glow for angry emoji */
+}
+
+/* Fade-in animation for body */
+@keyframes fadeIn {
+  from { opacity :0 ; }
+  to { opacity :1 ; }
+}
