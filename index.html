@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="mood-display" class="mood-display">
+            <span id="mood-emoji" class="emoji">😊</span>
+            <h1 id="mood-text">Happy</h1>
+        </div>
+        <button id="unicorn-button" class="unicorn-button" onclick="toggleSidebar()">🦄</button>
+        <div id="sidebar" class="sidebar hidden">
+            <button class="close-button" onclick="closeSidebar()">×</button>
+            <h2>Only for Admin :3</h2>
+            <input type="password" id="password-input" placeholder="Enter Password" class="password-input">
+            <button class="submit-button" onclick="checkPassword()">Submit</button>
+            <div id="mood-panel" class="mood-panel hidden">
+                <h2>Select Your Mood:</h2>
+                <button data-emoji="😊" onclick="setMood('😊', 'Happy')">Happy</button>
+                <button data-emoji="😢" onclick="setMood('😢', 'Sad')">Sad</button>
+                <button data-emoji="😟" onclick="setMood('😟', 'Anxious')">Anxious</button>
+                <button data-emoji="😃" onclick="setMood('😃', 'Excited')">Excited</button>
+                <button data-emoji="😡" onclick="setMood('😡', 'Angry')">Angry</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
